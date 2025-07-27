@@ -1,8 +1,9 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
-import { fetchMedals } from "@/services/medalsService";
-import { Medals } from "@/types";
+import { useState, useEffect } from 'react';
+import { fetchMedals } from '@/services/medalsService';
+import { Medals } from '@/types';
+import Flag from '@/components/Flag';
 
 export default function Home() {
   const [medals, setMedals] = useState<Medals[]>([]);
@@ -11,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     fetchMedals()
       .then(setMedals)
-      .catch(() => setError("Failed to load medals"));
+      .catch(() => setError('Failed to load medals'));
   }, []);
 
   if (error) {
@@ -32,6 +33,7 @@ export default function Home() {
           </li>
         ))}
       </ul>
+      <Flag code="CAN" />
     </div>
   );
 }
