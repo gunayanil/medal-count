@@ -10,7 +10,7 @@ Bare minimum tests and accessibility improvements implemented.
 ### Notes
 
 - Started around 10:30 am and finished at 1:30 pm
-- CSS sprite handling took a bit of time — I'm still not 100% confident in the math logic
+- CSS sprite handling took a bit of time, I'm still not 100% confident in the backgorund position logic
 
 ## Run
 
@@ -21,4 +21,6 @@ npm run dev
 
 ## Test
 
-`npm run test`
+```bash
+npm run test
+```
