@@ -25,6 +25,7 @@ export default function Table({ data }: { data: Medals[] }) {
     <table className={styles.table}>
       <thead>
         <tr>
+          {/* Todo: Make it screen-reader only header */}
           <th>Country</th>
           {headers.map(({ key, label }) => (
             <th

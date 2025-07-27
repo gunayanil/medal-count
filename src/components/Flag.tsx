@@ -18,8 +18,6 @@ const countries = [
 
 export default function Flag({ code }: { code: string }) {
   const index = countries.indexOf(code);
-
-  console.log(index);
   const width = 30;
   const height = 17;
 
@@ -31,6 +29,9 @@ export default function Flag({ code }: { code: string }) {
         width,
         height,
       }}
+      title={code}
+      role="img"
+      aria-label={code}
     />
   );
 }
