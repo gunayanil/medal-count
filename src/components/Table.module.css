@@ -1,0 +1,23 @@
+.table {
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+}
+
+.table tr {
+  border-bottom: 1px solid #ccc;
+}
+
+.table th {
+  cursor: pointer;
+}
+
+.table td:first-child {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { fetchMedals } from '@/services/medalsService';
 import { Medals } from '@/types';
 import Flag from '@/components/Flag';
+import Table from '@/components/Table';
 
 export default function Home() {
   const [medals, setMedals] = useState<Medals[]>([]);
@@ -26,14 +27,7 @@ export default function Home() {
   return (
     <div>
       <h1>Medal Count</h1>
-      <ul>
-        {medals.map((country) => (
-          <li key={country.code}>
-            {country.code} gold: {country.gold}, silver: {country.silver}, bronze: {country.bronze}
-          </li>
-        ))}
-      </ul>
-      <Flag code="CAN" />
+      <Table data={medals} />
     </div>
   );
 }
