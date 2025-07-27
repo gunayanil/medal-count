@@ -4,3 +4,5 @@ export type Medals = {
   silver: number;
   bronze: number;
 }
+
+export type Sort = 'gold' | 'silver' | 'bronze' | 'total';
