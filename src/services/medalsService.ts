@@ -1,4 +1,6 @@
-export async function fetchMedals(): Promise<any> {
+import { Medals } from "@/types";
+
+export async function fetchMedals(): Promise<Medals[]> {
   const res = await fetch ('/api/medals');
 
   if (!res.ok) {

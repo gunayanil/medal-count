@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { fetchMedals } from "@/services/medalsService";
+import { Medals } from "@/types";
 
 export default function Home() {
-  const [medals, setMedals] = useState([]);
+  const [medals, setMedals] = useState<Medals[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
